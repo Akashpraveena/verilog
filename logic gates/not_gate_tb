@@ -1,0 +1,12 @@
+module tb_or_gate;
+  reg a ;
+  wire y;
+  not_gate dut (.*);
+initial begin  
+ #10 a = 0 ; 
+ #10 a = 1 ;
+end
+initial begin
+  $monitor("time=0%t a=%b y=%b ", $time,a,y);
+end 
+endmodule
