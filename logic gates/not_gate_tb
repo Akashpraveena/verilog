@@ -1,4 +1,4 @@
-module tb_or_gate;
+module tb_nand_gate;
   reg a ;
   wire y;
   not_gate dut (.*);
