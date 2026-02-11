@@ -1,3 +1,9 @@
-module mux4_1(input i0,i1,i2,i3,s1,s2,output y);
-  assign y=(~s1&~s2&i0)|(~s1&s2&i1)|(s1&~s2&i2)|(s1&s2&i3);
+module mux2_1(input i0,i1,s,output reg y);
+  always @(*)begin
+    if(s==0)
+      y=i0;
+    else
+      y=i1;
+  end 
 endmodule
+  
